@@ -78,6 +78,21 @@ h2 {
   border-radius: 999px; padding: 5px 14px;
 }
 
+.cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.98rem; font-weight: 600; letter-spacing: 0.4px;
+  color: #0a0817; text-decoration: none;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta));
+  border-radius: 999px; padding: 11px 22px;
+  box-shadow: 0 0 18px rgba(92, 240, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta:hover {
+  color: #0a0817; transform: translateY(-1px);
+  box-shadow: 0 0 26px rgba(255, 61, 176, 0.5);
+}
+.cta .tri { font-size: 1.05rem; line-height: 1; }
+
 p.lead { color: var(--text); }
 a { color: var(--cyan); }
 a:hover { color: var(--magenta); }
