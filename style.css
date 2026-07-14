@@ -93,6 +93,23 @@ h2 {
 }
 .cta .tri { font-size: 1.05rem; line-height: 1; }
 
+/* Official store badges.
+   Both stores forbid altering their badge art, so these are the unmodified assets
+   (Apple's SVG from the Marketing Tools, Google's generic PNG) and we only scale them.
+
+   The two have different geometry: Google's PNG bakes its mandated clear space INTO the
+   image (file is 1.488x taller than the artwork inside it), while Apple's SVG has none.
+   Matching the two files on height would therefore render Apple's badge visibly smaller —
+   which breaks Apple's rule that its badge must never appear smaller than another store's.
+   So the Play badge is scaled by that 1.488 factor, leaving the two artworks equal. */
+.badges { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.badge { display: inline-block; transition: transform 0.15s ease, opacity 0.15s ease; }
+.badge:hover { transform: translateY(-1px); opacity: 0.85; }
+.badge img { display: block; height: 100%; width: auto; }
+.badge-apple { height: 46px; }          /* artwork height */
+.badge-play { height: 68px; }           /* 46 x 1.488 -> same artwork height, padding absorbed */
+.badge-play img { margin-left: -10px; } /* pull back Google's baked-in left padding */
+
 p.lead { color: var(--text); }
 a { color: var(--cyan); }
 a:hover { color: var(--magenta); }
