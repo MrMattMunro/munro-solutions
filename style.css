@@ -100,8 +100,8 @@ h2 {
 .badge { display: inline-block; transition: transform 0.15s ease, opacity 0.15s ease; }
 .badge:hover { transform: translateY(-1px); opacity: 0.85; }
 .badge img { display: block; height: 100%; width: auto; }
-.badge-apple { height: 58px; }          /* artwork height */
-.badge-play { height: 86px; }           /* 58 x 1.488 -> same artwork height, padding absorbed */
+.badge-apple { height: 52px; }          /* artwork height */
+.badge-play { height: 77px; }           /* 52 x 1.488 -> same artwork height, padding absorbed */
 .badge-play img { margin-left: -10px; } /* pull back Google's baked-in left padding */
 
 p.lead { color: var(--text); }
